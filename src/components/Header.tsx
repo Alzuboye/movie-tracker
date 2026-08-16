@@ -1,5 +1,5 @@
 function Header() {
-  return <h1>Elokuvaprojekti!</h1>;
+  return <h1>Elokuvatrakkeri</h1>;
 }
 
 export default Header;
