@@ -1,0 +1,14 @@
+/* Search bar */
+.search-bar {
+  width: 500px;
+  padding: 6px;
+  background-color: blanchedalmond;
+  color: darkslategrey;
+  border: 2px solid goldenrod;
+  border-radius: 8px;
+}
+
+.search-bar:focus {
+  outline: 2px solid goldenrod;
+  outline-offset: 2px;
+}
