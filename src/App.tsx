@@ -1,7 +1,13 @@
+// Components
 import Header from './components/Header';
 import MovieCard from './components/MovieCard';
+import SearchBar from './components/SearchBar';
+// Types
 import type { Movie } from './types/Movie';
+// CSS
 import './App.css';
+// Hooks
+import { useState } from 'react';
 
 const movies: Movie[] = [
   {
@@ -31,21 +37,30 @@ const movies: Movie[] = [
 ];
 
 function App() {
+  const [search, setSearch] = useState('');
+  const filteredMovies = movies.filter((movie) => {
+    return movie.title.toLowerCase().includes(search.toLowerCase());
+  });
   return (
     <div className="app">
       <Header />
+      <SearchBar search={search} setSearch={setSearch} />
       <div className="movie-list">
-        {movies.map((movie) => {
-          return (
-            <MovieCard
-              key={movie.id}
-              title={movie.title}
-              year={movie.year}
-              rating={movie.rating}
-              poster={movie.poster}
-            />
-          );
-        })}
+        {filteredMovies.length === 0 ? (
+          <p>No movies found</p>
+        ) : (
+          filteredMovies.map((movie) => {
+            return (
+              <MovieCard
+                key={movie.id}
+                title={movie.title}
+                year={movie.year}
+                rating={movie.rating}
+                poster={movie.poster}
+              />
+            );
+          })
+        )}
       </div>
     </div>
   );
