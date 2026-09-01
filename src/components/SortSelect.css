@@ -1,0 +1,9 @@
+/* Sort select */
+.sort-select {
+  width: 250px;
+  padding: 6px;
+  background-color: blanchedalmond;
+  color: darkslategrey;
+  border: 2px solid goldenrod;
+  border-radius: 8px;
+}
