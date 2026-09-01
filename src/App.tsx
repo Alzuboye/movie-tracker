@@ -2,6 +2,7 @@
 import Header from './components/Header';
 import MovieCard from './components/MovieCard';
 import SearchBar from './components/SearchBar';
+import SortSelect from './components/SortSelect';
 // Types
 import type { Movie } from './types/Movie';
 // CSS
@@ -38,18 +39,31 @@ const movies: Movie[] = [
 
 function App() {
   const [search, setSearch] = useState('');
+  const [sortBy, setSortBy] = useState('rating');
   const filteredMovies = movies.filter((movie) => {
     return movie.title.toLowerCase().includes(search.toLowerCase());
+  });
+  const sortedMovies = [...filteredMovies].sort((a, b) => {
+    if (sortBy === 'rating') {
+      return b.rating - a.rating;
+    } else if (sortBy === 'year') {
+      return b.year - a.year;
+    } else if (sortBy === 'title') {
+      return a.title.localeCompare(b.title);
+    } else {
+      return 0;
+    }
   });
   return (
     <div className="app">
       <Header />
       <SearchBar search={search} setSearch={setSearch} />
+      <SortSelect sortBy={sortBy} setSortBy={setSortBy}></SortSelect>
       <div className="movie-list">
         {filteredMovies.length === 0 ? (
           <p>No movies found</p>
         ) : (
-          filteredMovies.map((movie) => {
+          sortedMovies.map((movie) => {
             return (
               <MovieCard
                 key={movie.id}
@@ -65,5 +79,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
