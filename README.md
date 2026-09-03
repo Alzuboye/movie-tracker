@@ -1,77 +1,72 @@
-# React + TypeScript + Vite
+# Movie Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal movie tracking application built with React and TypeScript.
 
-Currently, two official plugins are available:
+The project is currently in development and is part of my journey to improve my software development skills and gain more hands-on experience with React and TypeScript.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚧 Project Status
 
-## React Compiler
+This project is currently in an early stage of development. New features and improvements are being added as the project progresses.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 🛠 Tech Stack
 
-Note: This will impact Vite dev & build performances.
+- React
+- TypeScript
+- Vite
+- CSS
+- Git & GitHub
 
-## Expanding the ESLint configuration
+## ✨ Current Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Displays a list of movies
+- Reusable React components for displaying movie information
+- TypeScript interfaces for typed movie data
+- Component-based application structure
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📌 Planned Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Integration with an external movie API
+- Browse popular movies
+- Movie search
+- Movie detail pages
+- Watchlist
+- Watched movies
+- Improved and responsive user interface
+- Persistent user data
+- Backend functionality
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🎯 Project Goals
 
+The goal of this project is to build a complete movie tracking application while improving my understanding of modern web development.
+
+My current focus is on strengthening my React and TypeScript skills. As the project develops, I also plan to explore backend development and gradually expand the application towards a full-stack project.
+
+## 🚀 Running the Project Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Alzuboye/movie-tracker
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Install the dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
 ```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+## 📚 What I'm Practicing
+
+Through this project, I am practicing:
+
+- React fundamentals and component design
+- TypeScript and type safety
+- Working with props and application data
+- Application structure
+- Git and GitHub workflow
