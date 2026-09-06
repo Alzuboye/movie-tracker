@@ -18,16 +18,17 @@ This project is currently in an early stage of development. New features and imp
 
 ## ✨ Current Features
 
-- Displays a list of movies
-- Reusable React components for displaying movie information
-- TypeScript interfaces for typed movie data
+- Browse popular movies using the TMDB API
+- Search movies by title
+- Sort movies by rating, release year, or title
+- Loading, error, and empty-state handling
+- Handles missing posters, ratings, and release years
+- Reusable React components
+- TypeScript interfaces and typed API data
 - Component-based application structure
 
 ## 📌 Planned Features
 
-- Integration with an external movie API
-- Browse popular movies
-- Movie search
 - Movie detail pages
 - Watchlist
 - Watched movies
