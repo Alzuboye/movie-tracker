@@ -1,62 +1,74 @@
-# Movie Tracker
+# 🎬 Movie Tracker
 
-A personal movie tracking application built with React and TypeScript.
+A movie discovery and tracking application built with **React** and **TypeScript**, using **The Movie Database (TMDB) API** for real movie data.
 
-The project is currently in development and is part of my journey to improve my software development skills and gain more hands-on experience with React and TypeScript.
+The project is being developed as a hands-on way to strengthen my frontend development skills and gradually expand my experience towards full-stack development.
 
-## 🚧 Project Status
+## ✨ Features
 
-This project is currently in an early stage of development. New features and improvements are being added as the project progresses.
+* Browse popular movies using the TMDB API
+* Search movies by title
+* Sort movies by rating, release year, or title
+* Display movie posters, ratings, and release years
+* Loading, error, and empty-state handling
+* Graceful handling of missing movie data
+* Reusable React components
+* Typed API responses and application data with TypeScript
 
 ## 🛠 Tech Stack
 
-- React
-- TypeScript
-- Vite
-- CSS
-- Git & GitHub
+* React
+* TypeScript
+* Vite
+* CSS
+* TMDB API
+* Git & GitHub
 
-## ✨ Current Features
+## 🚧 Project Status
 
-- Browse popular movies using the TMDB API
-- Search movies by title
-- Sort movies by rating, release year, or title
-- Loading, error, and empty-state handling
-- Handles missing posters, ratings, and release years
-- Reusable React components
-- TypeScript interfaces and typed API data
-- Component-based application structure
+The core movie browsing functionality is implemented, including API integration, search, sorting, and state handling.
+
+The project is actively being developed with additional movie tracking features planned.
 
 ## 📌 Planned Features
 
-- Movie detail pages
-- Watchlist
-- Watched movies
-- Improved and responsive user interface
-- Persistent user data
-- Backend functionality
+* Movie detail pages
+* Watchlist
+* Watched movies
+* Improved responsive UI
+* Persistent user data
+* Backend functionality
 
 ## 🎯 Project Goals
 
-The goal of this project is to build a complete movie tracking application while improving my understanding of modern web development.
+The goal of this project is to build a complete movie tracking application while gaining practical experience with modern web development.
 
-My current focus is on strengthening my React and TypeScript skills. As the project develops, I also plan to explore backend development and gradually expand the application towards a full-stack project.
+The current focus is on React, TypeScript, API integration, component design, and application structure. Future development will introduce persistent data and backend functionality, gradually expanding the project into a full-stack application.
 
 ## 🚀 Running the Project Locally
 
-Clone the repository:
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Alzuboye/movie-tracker
+git clone https://github.com/Alzuboye/movie-tracker.git
+cd movie-tracker
 ```
 
-Install the dependencies:
+### 2. Install dependencies
 
 ```bash
 npm install
 ```
 
-Start the development server:
+### 3. Configure the TMDB API
+
+Create a `.env` file in the project root and add your TMDB API configuration.
+
+```env
+VITE_TMDB_API_KEY=your_api_key_here
+```
+
+### 4. Start the development server
 
 ```bash
 npm run dev
@@ -64,10 +76,12 @@ npm run dev
 
 ## 📚 What I'm Practicing
 
-Through this project, I am practicing:
+Through this project, I am gaining hands-on experience with:
 
-- React fundamentals and component design
-- TypeScript and type safety
-- Working with props and application data
-- Application structure
-- Git and GitHub workflow
+* React component design and state management
+* TypeScript and type-safe application development
+* Fetching and handling data from external APIs
+* Search and sorting functionality
+* Loading, error, and empty UI states
+* Organizing a growing React application
+* Git branching and GitHub workflow
