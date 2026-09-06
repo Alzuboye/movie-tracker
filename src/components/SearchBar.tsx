@@ -3,19 +3,27 @@ import './SearchBar.css';
 interface SearchBarProps {
   search: string;
   setSearch: (value: string) => void;
+  handleSearch: (value: string) => Promise<void>;
 }
 
-const SearchBar = ({ search, setSearch }: SearchBarProps) => {
+const SearchBar = ({ search, setSearch, handleSearch }: SearchBarProps) => {
   return (
-    <input
-      className="search-bar"
-      type="text"
-      placeholder="Search movies..."
-      value={search}
-      onChange={(event) => {
-        setSearch(event.target.value);
+    <form
+      onSubmit={(event) => {
+        event.preventDefault();
+        handleSearch(search);
       }}
-    />
+    >
+      <input
+        className="search-bar"
+        type="text"
+        placeholder="Search movies..."
+        value={search}
+        onChange={(event) => {
+          setSearch(event.target.value);
+        }}
+      />
+    </form>
   );
 };
 

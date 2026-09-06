@@ -1,8 +1,9 @@
 import './SortSelect.css';
+import type { SortBy } from '../types/SortBy';
 
 interface SortByProps {
-  sortBy: string;
-  setSortBy: (value: string) => void;
+  sortBy: SortBy;
+  setSortBy: (value: SortBy) => void;
 }
 
 const SortSelect = ({ sortBy, setSortBy }: SortByProps) => {
@@ -11,7 +12,7 @@ const SortSelect = ({ sortBy, setSortBy }: SortByProps) => {
       className="sort-select"
       value={sortBy}
       onChange={(event) => {
-        setSortBy(event.target.value);
+        setSortBy(event.target.value as SortBy);
       }}
     >
       <option value="rating">Rating</option>
